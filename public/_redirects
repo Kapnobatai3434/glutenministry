@@ -1,0 +1,7 @@
+# Cloudflare Pages redirects for Next.js static export
+
+# Handle admin route redirect
+/admin /admin/index.html 200
+
+# Handle client-side routing (SPA fallback)
+/* /index.html 200
