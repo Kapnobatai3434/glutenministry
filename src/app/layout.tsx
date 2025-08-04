@@ -1,22 +1,18 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Lora } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: "Gluten Ministry - Faith-Based Gluten-Free Community",
-  description: "Supporting the gluten-free community through faith, fellowship, and food. Recipes, tips, and community support for gluten-free living.",
+  title: "The Art of Sourdough - From Starter to Loaf",
+  description: "Discover the joy of baking with natural ingredients. From starter to loaf, we celebrate the craft of sourdough.",
 }
 
 export default function RootLayout({
@@ -27,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${lora.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
         <Header />
         <main className="flex-1">
